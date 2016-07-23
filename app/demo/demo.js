@@ -29,8 +29,21 @@ DemoModule.config(function($stateProvider, $urlRouterProvider) {
         })
         .state('sidemenu.directive3', {
             url: '/directive3',
-            templateUrl: '/demo/template/directive_demos/demo2.html',
+            templateUrl: '/demo/template/directive_demos/demo3.html',
             controller: 'DemoCtrl',
             data:'通过指令理解双向绑定'
+        })
+
+        .state('sidemenu.ngReadonly', {
+            url: '/ngReadonly',
+            templateUrl: '/demo/template/ng_demos/ng-readonly.html',
+            controller: 'DemoCtrl',
+            data:''
+        })
+        .state('sidemenu.ngController', {
+            url: '/ngController',
+            templateUrl: '/demo/template/ng_demos/ng-controller.html',
+            controller: 'DemoCtrl',
+            data:''
         })
 });

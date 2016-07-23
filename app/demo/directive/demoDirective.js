@@ -60,3 +60,24 @@ DemoModule.directive('myDirective3', function() {
     };
 });
 
+/**
+ * 指令绑定理解双向绑定
+ */
+
+DemoModule.directive('myDirective4', function() {
+    return {
+        restrict: 'A',
+        replace: true,
+        scope: {
+            myUrl: '=someAttr', // 经过了修改
+            myLinkText: '@'
+        },
+        template: '\
+             <div>\
+                 <label>My Url Field:</label>\
+                 <input type="text"\
+                     ng-model="myUrl" />\
+                 <a href="{{myUrl}}">{{myLinkText}}</a>\
+                </div>\ '
+    }
+});

@@ -9,4 +9,28 @@ DemoModule.controller('DemoCtrl',function($scope, $state, $interpolate,$rootScop
                 template({to: $scope.to});
         }
     });
+
+    $scope.someBareValue = 'hello';
+    $scope.someAction = function() {
+        // 在SomeController和ChildController中设置{{ someBareValue }}
+        $scope.someBareValue = 'hello stephen, from parent';
+    };
+
+
+    $scope.someModel = {
+        someValue: 'hello computer'
+    }
+    $scope.someAction1 = function() {
+        $scope.someModel.someValue = 'hello stephen, from parent';
+    };
+
+});
+DemoModule.controller('ChildController', function($scope) {
+    $scope.childAction = function() {
+        // 在ChildController中设置{{ someBareValue }}
+        $scope.someBareValue = 'hello stephen, from child';
+    };
+    $scope.childAction1 = function() {
+        $scope.someModel.someValue = 'hello stephen, from child';
+    };
 });

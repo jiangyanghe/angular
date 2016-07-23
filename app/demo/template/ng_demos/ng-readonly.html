@@ -1,0 +1,47 @@
+<p>someProperty1没有值，ng-disabled=true</p>
+<input type="text" ng-model="someProperty1" placeholder="TypetoEnable">
+<button ng-model="button" ng-disabled="!someProperty1">AButton</button>
+
+<hr>
+<p>someProperty有值，ng-readonly=true</p>
+<input type="text" ng-model="someProperty2"><br/>
+<input type="text" ng-readonly="someProperty2" value="Some text here"/>
+
+<hr>
+<p>使用ng-checked，并初始化赋值</p>
+<label>someProperty = {{someProperty3}}</label>
+<input type="checkbox"
+       ng-checked="someProperty3"
+       ng-init="someProperty3 = true"
+       ng-model="someProperty3">
+
+<hr>
+<p>ng-href和ng-src都能有效帮助重构和避免错误,因此在改进代码时强烈建议用它们代替原 来的href和src属性。<br>
+    这里的潜在问题是当用户点击一个由插值动态生成的链接时,如果插值尚未生效,将会跳转 到错误的页面(通常是404)。<br>
+    AngularJS会告诉浏览器在ng-src对应的表达式生效之前不要加载图像:
+</p>
+
+
+<hr>
+<p> ng-switch 指令根据当前的值显示或隐藏对应部分。</p>
+我喜欢的网站
+<select ng-model="myVar">
+    <option value="google">www.google.com
+    <option value="taobao">www.taobao.com
+</select>
+<div ng-switch="myVar">
+    <div ng-switch-when="google">
+        <h1>Google</h1>
+        <p>欢迎访问Google</p>
+    </div>
+    <div ng-switch-when="taobao">
+        <h1>淘宝</h1>
+        <p>欢迎访问淘宝</p>
+    </div>
+    <div ng-switch-default>
+        <h1>切换</h1>
+        <p>选择不同选项显示对应的值。</p>
+    </div>
+</div>
+<hr>
+

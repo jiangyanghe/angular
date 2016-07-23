@@ -1,0 +1,21 @@
+<div>
+    <h3>父子controller；$scope作用域</h3>
+    <p>由于原型继承的关系,修改父级对象中的someBareValue会同时修改子对象中的值,
+        <br>但反之则不行。说明了子控制器是复制而非引用someBareValue。</p>
+    {{ someBareValue }}
+    <button ng-click="someAction()">Communicate to child</button>
+    <div ng-controller="ChildController">
+        {{ someBareValue }}
+        <button ng-click="childAction()">Communicate to parent</button>
+    </div>
+
+    <h3 style="width: 550px">JavaScript对象要么是值复制要么是引用复制。字符串、数字和布尔型变量是值
+        复制。数组、对象和函数则是引用复制。</h3>
+    <hr>
+    {{ someModel.someValue }}
+    <button ng-click="someAction1()">Communicate to child</button>
+    <div ng-controller="ChildController">
+        {{ someModel.someValue }}
+        <button ng-click="childAction1()">Communicate to parent</button>
+    </div>
+</div>

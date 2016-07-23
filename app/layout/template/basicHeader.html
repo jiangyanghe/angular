@@ -1,0 +1,10 @@
+<header>
+    <style>
+        .active{
+            color: red;
+        }
+    </style>
+    <ul class="list-inline" ng-repeat="menu in menus">
+        <li><a ui-sref="{{menu}}" ui-sref-active="active">{{menu}}</a></li>
+    </ul>
+</header>

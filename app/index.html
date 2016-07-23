@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="shortcut icon" href="http://www.erhuo.live/img/ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/common.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="stephenProjectApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <div ui-view></div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="js/sdk_framework.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/main.js"></script>
+
+    <script src="/layout/layout.js"></script>
+    <script src="/layout/controller/navsController.js"></script>
+
+
+    <script src="/home/home.js"></script>
+    <script src="/home/controller/homeController.js"></script>
+
+    <script src="/demo/demo.js"></script>
+    <script src="/demo/controller/demoController.js"></script>
+    <script src="/demo/directive/demoDirective.js"></script>
+
+    <!-- endbuild -->
+</body>
+</html>

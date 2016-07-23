@@ -1,0 +1,12 @@
+<h1>{{directives.title}}</h1>
+
+
+
+<div>
+    <select ng-model="member.province" style="width: 100px;height: 26px" ng-options="m.name as m.name for m in provinces">
+        <!--<option ng-repeat="item in provinces" value="{{item.name}}">{{item.name}}</option>-->
+    </select>
+    <select ng-model="member.city" style="width: 100px;height: 26px" ng-options="m.name as m.name for m in citys">
+        <!--<option ng-repeat="item in citys"  value="{{item.name}}">{{item.name}}</option>-->
+    </select>
+</div>

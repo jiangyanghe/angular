@@ -1,0 +1,14 @@
+@import "module/foundation";
+.form-demo{
+.row {
+  border: 0px solid green;
+}
+
+input.ng-invalid {
+  border: 1px solid red;
+}
+
+input.ng-valid {
+  border: 1px solid green;
+}
+}

@@ -81,3 +81,23 @@ DemoModule.directive('myDirective4', function() {
                 </div>\ '
     }
 });
+
+/**
+ * 指令详解
+ * scope
+ */
+
+DemoModule.directive('myScope', function() {
+    return {
+        restrict: 'A',
+        template: 'scope为空: {{ myProperty }}',
+        scope: {}
+    }
+});
+DemoModule.directive('myInheritScopeDirective', function() {
+    return {
+        restrict: 'A',
+        template: 'scope 为true: {{ myProperty }}',
+        scope: true
+    };
+});

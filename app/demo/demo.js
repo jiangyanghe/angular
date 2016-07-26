@@ -15,6 +15,12 @@ DemoModule.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: '/demo/template/form.html',
             controller: 'DemoCtrl'
         })
+        .state('sidemenu.directive', {
+            url: '/directive',
+            templateUrl: '/demo/template/directive_demos/demo.html',
+            controller: 'DemoCtrl',
+            data:'指令第一个demo'
+        })
         .state('sidemenu.directive1', {
             url: '/directive1',
             templateUrl: '/demo/template/directive_demos/demo1.html',
@@ -45,5 +51,11 @@ DemoModule.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: '/demo/template/ng_demos/ng-controller.html',
             controller: 'DemoCtrl',
             data:''
+        })
+        .state('sidemenu.scope', {
+            url: '/scope',
+            templateUrl: '/demo/template/directive_demos/scope.html',
+            controller: 'DemoCtrl',
+            data:'指令详解 scope'
         })
 });

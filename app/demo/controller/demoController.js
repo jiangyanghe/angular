@@ -24,6 +24,8 @@ DemoModule.controller('DemoCtrl',function($scope, $state, $interpolate,$rootScop
         $scope.someModel.someValue = 'hello stephen, from parent';
     };
 
+
+    $scope.cx =11;
 });
 DemoModule.controller('ChildController', function($scope) {
     $scope.childAction = function() {
@@ -34,3 +36,9 @@ DemoModule.controller('ChildController', function($scope) {
         $scope.someModel.someValue = 'hello stephen, from child';
     };
 });
+
+/**
+ * 指令详解 scope
+ */
+DemoModule.controller('SomeCtrl', function($scope) {});
+DemoModule.controller('SecondCtrl', function($scope) {});

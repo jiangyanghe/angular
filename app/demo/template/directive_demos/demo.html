@@ -1,0 +1,30 @@
+<code>
+angular.module('myApp', [])
+    .directive('myDirective', function() {
+        return {
+            restrict: String,//告诉AngularJS这个指令在DOM中可以何种形式被声明，默认为A
+            priority: Number,//优先级参数可以被设置为一个数值,默认为0；决定指令执行顺序
+            terminal: Boolean,//用来告诉AngularJS停止运行当前元素上比本指令优先级低的指令。
+            template: String or Template Function://每一行末尾的反斜线,这样AngularJS才能正确解析多行字符串
+            templateUrl: String or Template//
+            function(tElement, tAttrs) (...},
+            templateUrl: String,
+            replace: Boolean or String,//默认值为false。默认值意味着模板会被当作子元素插入到调用此指令的元素内部
+            scope: Boolean or Object,//当scope设置为true时,会从父作用域继承并创建一个新的作用域对象。默认是false
+            transclude: Boolean,
+            controller: String or
+            function(scope, element, attrs, transclude, otherInjectables) { ... }, controllerAs: String,
+            require: String,
+            link: function(scope, iElement, iAttrs) { ... },
+            compile: // 返回一个对象或连接函数,如下所示:
+                function(tElement, tAttrs, transclude) {
+                    return {
+                        pre: function(scope, iElement, iAttrs, controller) { ... },
+                        post: function(scope, iElement, iAttrs, controller) { ... }
+                    }
+                    // 或者
+                    return function postLink(...) { ... }
+        }
+    };
+});
+</code>

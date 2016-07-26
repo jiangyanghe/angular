@@ -1,0 +1,10 @@
+<p>具有隔离作用域的指令最主要的使用场景是创建可复用的组件,组件可以在未知上下文中使 用,<br>
+    并且可以避免污染所处的外部作用域或不经意地污染内部作用域。</p>
+<p>创建具有隔离作用域的指令需要将scope属性设置为一个空对象{}。</p>
+<div ng-init="myProperty = 'wow, this is cool'">
+父级 scope: {{ myProperty }}
+<div my-inherit-scope-directive="SomeCtrl"></div>
+<div my-scope>
+    scope 为true: {{ myProperty }}
+</div>
+</div>

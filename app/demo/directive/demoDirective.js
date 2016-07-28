@@ -101,3 +101,31 @@ DemoModule.directive('myInheritScopeDirective', function() {
         scope: true
     };
 });
+
+DemoModule.directive('pane', function(){
+    return {
+        restrict: 'EA',
+        template: '<div style="border: 1px solid black;"><div class="title" style="background-olor: gray">{{title}}</div></div>',
+        replace: true,
+        transclude: true,
+        controller: ['$scope', '$element', '$transclude', function ($scope, element, $transclude) {
+            $transclude(function(clone, scope) {
+                var title= element.find('title');
+                var time = clone.find('.time');
+                var type = clone.find('.type');
+                var text= clone.find('.content');
+
+                title.append(time);
+                element.append(type);
+                element.append(text)
+            });
+        }]
+    };
+});
+
+DemoModule.directive('ctrlDemo',function(){
+    return{
+        restrict:'AE',
+        controller:'CtrlDemoCtrl'
+    }
+});

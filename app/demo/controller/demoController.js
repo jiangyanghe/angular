@@ -42,3 +42,17 @@ DemoModule.controller('ChildController', function($scope) {
  */
 DemoModule.controller('SomeCtrl', function($scope) {});
 DemoModule.controller('SecondCtrl', function($scope) {});
+
+
+DemoModule.controller('CtrlDemoCtrl', function($scope,$element,$timeout,$attrs) {
+    $scope.text='指令引用外部controller';
+    $scope.flag =1;
+    $element.addClass('active');
+    console.log($scope.flag);
+    $attrs.$set('b', 'bbb');
+    console.log($attrs.b);
+    console.log($attrs.a);
+    $timeout(function(){//如果不用$timeout 打印出来的是{{text}}
+        console.log($element.find('#aId').text());//指令引用外部controller
+    },2000);
+});

@@ -58,4 +58,16 @@ DemoModule.config(function($stateProvider, $urlRouterProvider) {
             controller: 'DemoCtrl',
             data:'指令详解 scope'
         })
+        .state('sidemenu.transclude', {
+            url: '/transclude',
+            templateUrl: '/demo/template/directive_demos/transclude.html',
+            controller: 'DemoCtrl',
+            data:'指令详解 transclude'
+        })
+        .state('sidemenu.controller', {
+            url: '/controller',
+            templateUrl: '/demo/template/directive_demos/controller.html',
+            controller: 'DemoCtrl',
+            data:'指令详解 controller'
+        })
 });

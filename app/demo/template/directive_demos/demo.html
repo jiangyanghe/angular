@@ -11,9 +11,9 @@ angular.module('myApp', [])
             templateUrl: String,
             replace: Boolean or String,//默认值为false。默认值意味着模板会被当作子元素插入到调用此指令的元素内部
             scope: Boolean or Object,//当scope设置为true时,会从父作用域继承并创建一个新的作用域对象。默认是false
-            transclude: Boolean,
-            controller: String or
-            function(scope, element, attrs, transclude, otherInjectables) { ... }, controllerAs: String,
+            transclude: Boolean,//当你希望创建一个可以包含任意内容的指令时,才使用transclude: true。
+            controller: String or function(scope, element, attrs, transclude, otherInjectables) { ... },
+            controllerAs: String,
             require: String,
             link: function(scope, iElement, iAttrs) { ... },
             compile: // 返回一个对象或连接函数,如下所示:
